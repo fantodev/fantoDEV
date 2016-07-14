@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>hello world</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>  
+  <script src="http://mysqljs.com/mysql.js"></script>
+</head>
+<body>
+    
+    
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+        
+         <div class="one-half column category">
+          <img class="u-max-full-width" src="https://helloworldmackay.files.wordpress.com/2014/12/helloworld-logo-horizontal.jpg">
+        </div>
+      </div>
+        
+        
+    <pre id="output"></pre>
+
+    <a class="button" href="data/up.php">update db</a>
+      
+    </div>
+  </div>
+<script>
+    MySql.Execute(
+        "sql7.freemysqlhosting.net",
+        "sql7126177", 
+        "nx9iUH6zIm", 
+        "sql7126177", 
+        "select * from prova", 
+        function (data) {
+        document.getElementById("output").innerHTML = JSON.stringify(data,null,2);
+    });
+    
+     MySql.Execute(
+        "sql7.freemysqlhosting.net",
+        "sql7126177", 
+        "nx9iUH6zIm", 
+        "sql7126177", 
+        "select * from prova", 
+        function (data) {
+        document.getElementById("output").innerHTML = JSON.stringify(data,null,2);
+    });
+</script>
+
+</body>
+    
+
+</html>
